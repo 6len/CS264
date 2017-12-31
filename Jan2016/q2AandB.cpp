@@ -1,4 +1,4 @@
-*/
+/*
 QUESTION
 Provide a C++ definition of an abstract base class called
 Container that defines the interface for a set of derived
@@ -40,7 +40,7 @@ length_ as appropriate.
 The class should also provide an implementation of the get
 method as specified in the base class, and a destructor. Note
 that you do not have to provide a method for inserting data.
-/*
+*/
 
 
 #include <iostream>
