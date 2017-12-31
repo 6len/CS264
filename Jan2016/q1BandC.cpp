@@ -1,3 +1,28 @@
+/*
+QUESTION
+(b) Provide a C++ based definition for a class called MyComplex
+that can be used to represent a complex number.
+The class should provide:
+(i) A parameterised constructor that takes as input two
+doubles for the real and imaginary part of the complex
+number.
+(ii) A parameterised constructor that takes a single double as
+input which initialises the real part of the complex number.
+The imaginary part of the complex number should be set
+to zero in this instance.
+(iii)A copy constructor.
+Note that your answer should include definitions for the above
+methods.
+[9 marks]
+(c) Define an overloaded “+” operator for MyComplex objects. The
+defined operator should permit the following usage:
+MyComplex C1(5.0,4.5), C2(3.0, 1.5);
+MyComplex C3 = C1 + C2;
+MyComplex C4 = C1 + 4;
+MyComplex C5 = 5 + C1;
+You should include code that needs to be defined both within
+and outside of the MyComplex class.
+*/
 #include <iostream>
 #include <cstring>
 
