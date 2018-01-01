@@ -1,6 +1,6 @@
 /*) Write a function in C++ that takes as input a positive integer n
 and returns as output an array of integers of length n, where the
-array is populated by the sequence 0..n-1. /*
+array is populated by the sequence 0..n-1. */
 
 #include <cstdlib>
 #include <iostream>
