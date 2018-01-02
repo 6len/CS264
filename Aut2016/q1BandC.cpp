@@ -28,8 +28,9 @@ using namespace std;
 class Rectangle {
     //protected:
 public:
+    //this would be protected, but public in this for the sake of testing
     double width, length;
-public:
+    //--------------------
 
     Rectangle() {
         width = 0;
