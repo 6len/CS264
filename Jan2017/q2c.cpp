@@ -44,12 +44,15 @@ public:
             int r, c; // number of rows and columns
             int *data; // pointer to matrix data
 };
-//---------------QUESTION-----------------------//
-class SymMatrix:public Matrix{
-public:
-    SymMatrix(int r):Matrix(r,r){}
+//----------------Question-------------------//
+class SymMatrix: public Matrix{
+	public:
+		SymMatrix(int r): Matrix(r, r){}
+		void set(int row, int col, int value){
+			data[row*c + col] = value;
+			data[col*c + row] = value;
+		}
 };
-
 //---------------------------------------------//
 
 void Matrix::set(int row, int col, int value){
@@ -65,16 +68,34 @@ void Matrix::print(){
             cout << endl;
         }
     }
-    cout << endl;
 }
 
 int main(){
     Matrix m(5,3);
     m.set(3,2,5);
     m.print();
-    
-    SymMatrix l(3);
+	
+	cout << endl;
+	
+	SymMatrix l(3);
     l.set(2,2,1);
     l.set(0,0,3);
+	l.set(1, 0, 2);
+	l.set(2, 0, 2);
     l.print();
+	
+	cout << endl;
+//----------------Question-------------------//
+	/* 
+	 * This is why you need a virtual function for Sym Matrix
+	 * This is legal code because SymMatrix inherits from Matrix 
+	 * The pointer is of type Matrix, therefore it expects to use the functions of Matrix
+	 * Using virtual in the Matrix class tells the compiler that this function is expected to be overridden
+	 * If set wasn't virtual then it would use set from the Matrix class instead of the SymMatrix class
+	*/
+	Matrix *k = new SymMatrix(3);
+	k->set(0,1,2);
+	k->print();
+	delete k;
+//---------------------------------------------//
 }
